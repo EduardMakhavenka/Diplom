@@ -50,7 +50,9 @@ export async function removeQuestionImpl(req, res) {
 
 export async function createQuestionImpl(req, res) {
   try {
-    await createQuestion(req.body);
+    const question = req.body;
+    question.createdAt = Date.now();
+    await createQuestion(question);
     res.status(200).json({
       success: true,
     });

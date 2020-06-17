@@ -10,7 +10,7 @@ export default (router) => {
   router.route('/questions')
     .get(getQuestionsImpl);
 
-  router.route('/questions')
+  router.route('/question')
     .post(createQuestionImpl);
 
   router.route('/questions/:id')

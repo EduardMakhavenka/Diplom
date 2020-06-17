@@ -1,10 +1,11 @@
 export default class Question {
-  constructor(text, author, role, createdAt, like, answers) {
+  constructor(text, name, email, createdAt, like, answers, to) {
     this.text = text;
-    this.author = author;
-    this.role = role;
+    this.name = name;
+    this.email = email;
     this.createdAt = createdAt;
     this.like = like;
     this.answers = answers;
+    this.to = to;
   }
 }

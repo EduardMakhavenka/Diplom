@@ -4,7 +4,22 @@ import {
   removeAnswer,
   createAnswer,
   updateAnswer,
+  getAnswersByQuestionId,
 } from './answer.action.mjs';
+
+export async function getAnswersByQuestionIdImpl(req, res) {
+  try {
+    const answers = await getAnswersByQuestionId(req.params.questionId);
+    res.status(200).json({
+      answers,
+      success: true,
+    });
+  } catch (err) {
+    res.status(400).json({
+      success: false,
+    });
+  }
+}
 
 export async function getAnswersImpl(req, res) {
   try {
@@ -50,7 +65,9 @@ export async function removeAnswerImpl(req, res) {
 
 export async function createAnswerImpl(req, res) {
   try {
-    await createAnswer(req.body);
+    const answer = req.body;
+    answer.createdAt = Date.now();
+    await createAnswer(answer);
     res.status(200).json({
       success: true,
     });

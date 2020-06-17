@@ -9,6 +9,8 @@ import Answer from './src/db/entities/Answer.mjs';
 import Disease from './src/db/entities/Disease.mjs';
 import Doctor from './src/db/entities/Doctor.mjs';
 import Question from './src/db/entities/Question.mjs';
+import Parameters from './src/db/entities/Parameters.mjs';
+import Plant from './src/db/entities/Plant.mjs';
 import config from './src/config/db.mjs';
 
 import routesInit from './src/routes/index.mjs';
@@ -27,7 +29,7 @@ typeorm.createConnection({
   port: db.port,
   database: db.database,
   synchronize: true,
-  entities: [Answer, Disease, Doctor, Question],
+  entities: [Answer, Disease, Doctor, Question, Parameters, Plant],
 }).then(() => {
   app.use(cors());
   app.use(bodyParser.json());

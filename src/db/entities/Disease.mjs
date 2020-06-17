@@ -16,6 +16,24 @@ export default new typeorm.EntitySchema({
     description: {
       type: 'string',
     },
+    definition: {
+      type: 'json',
+    },
+    causes: {
+      type: 'json',
+    },
+    treatment: {
+      type: 'json',
+    },
+    danger: {
+      type: 'json',
+    },
+    riskGroup: {
+      type: 'json',
+    },
+    prevention: {
+      type: 'json',
+    },
     createdAt: {
       type: 'double',
     },

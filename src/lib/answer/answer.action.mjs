@@ -26,3 +26,8 @@ export function updateAnswer(id, answer) {
   const answerRepository = connection.getRepository(Answer);
   answerRepository.updateOne({ _id: mongodb.ObjectID(id) }, { $set: answer }, { $upsert: false });
 }
+
+export function getAnswersByQuestionId(questionId) {
+  const answerRepository = connection.getRepository(Answer);
+  return answerRepository.find({ questionId });
+}

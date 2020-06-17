@@ -25,8 +25,8 @@ export default new typeorm.EntitySchema({
     like: {
       type: 'string',
     },
-    questions: {
-      type: 'json',
+    questionId: {
+      type: 'string',
     },
   },
 });

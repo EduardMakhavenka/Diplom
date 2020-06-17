@@ -13,10 +13,10 @@ export default new typeorm.EntitySchema({
     text: {
       type: 'string',
     },
-    author: {
+    name: {
       type: 'string',
     },
-    role: {
+    email: {
       type: 'string',
     },
     createdAt: {
@@ -27,6 +27,9 @@ export default new typeorm.EntitySchema({
     },
     answers: {
       type: 'json',
+    },
+    to: {
+      type: 'string',
     },
   },
 });
