@@ -13,7 +13,7 @@
     "body-parser": "1.17.2",
     "cookie-parser": "1.4.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongodb": "^3.5.3",
     "swagger-jsdoc": "^3.5.0",
     "swagger-ui-express": "^4.1.3",
